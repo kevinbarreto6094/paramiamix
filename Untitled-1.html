@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Mi Mejor Amiga 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    button {
+      padding: 10px 25px;
+      background-color: #fff;
+      color: #e91e63;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background-color: #f8bbd0;
+      color: #fff;
+    }
+
+    /* Pantalla emergente */
+    .pantalla-flores {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      animation: aparecer 0.6s ease forwards;
+    }
+
+    .flores-grandes {
+      font-size: 5rem;
+      animation: flotar 3s infinite ease-in-out alternate;
+    }
+
+    .mensaje-flor {
+      margin-top: 20px;
+      font-size: 1.5em;
+      max-width: 600px;
+      color: #fff;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes flotar {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>💖 Para Mi Mejor Amiga 💖</h1>
+  <p>Eres una persona increíble, única y muy especial para mí. La verdad, te llevo conociendo poco, pero me encanta tu forma de ser. En fin... gracias por existir 💕</p>
+  <button onclick="mostrarFlores()">Haz clic aquí</button>
+
+  <!-- Pantalla de flores -->
+  <div class="pantalla-flores" id="pantallaFlores">
+    <div class="flores-grandes">🌸🌼🌺🌻</div>
+    <div class="mensaje-flor">Estas flores son para ti, porque eres una persona hermosa por dentro y por fuera 💖</div>
+  </div>
+
+  <script>
+    function mostrarFlores() {
+      document.getElementById("pantallaFlores").style.display = "flex";
+    }
+  </script>
+</body>
+</html>
